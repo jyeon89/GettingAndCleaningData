@@ -69,3 +69,17 @@ sorted_data <- tidydata[order(tidydata$Subject, tidydata$Activity), ]
 ## write a tidy data as a table
 write.table(sorted_data, file = "./project/TidyDataSet.txt", row.names = FALSE)
 write.csv(sorted_data, file = "./project/TidyDataSet.csv", row.names = FALSE)
+
+
+### Full name of the features
+var <- names(sorted_data)
+var <- gsub('Acc',"Accelerometer",var)
+var <- gsub('Gyro', 'Gyroscope', var)
+var <- gsub('^t', 'Time', var)
+var <- gsub('^f', 'Frequency', var)
+var <- gsub('BodyBody', 'Body', var)
+var <- gsub('Mag', "Magnitude", var)
+var <- gsub('mean\\(\\)', 'Mean\\', var)
+var <- gsub('std\\(\\)', 'StandardDeviation', var)
+var <- gsub("([a-z])([A-Z])", "\\1 \\2", var)
+var <- gsub('-', ' - ', var)
