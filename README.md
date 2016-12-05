@@ -26,12 +26,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 R script called run_analysis.R that does the following.
 
  1. Create a directory and download and extract the **UCI HAR Dataset** zip file.
- 2. The following files are read:
+ 2. Following files are read:
   * test data
   * train data
   * features
   * activity labels
- 3. The test and train data are merged by grouping features(X), activity(Y), and subject ID.
+ 3. Test and train data are merged by grouping features(X), activity(Y), and subject ID.
  4. Select indices that only contain mean() and std(), and reset the data with the selected indices. Observations of the variable, activity(Y), is replaced the numeric values with the descriptive activity names.
  5. The data is now combined in order of Subject ID, activity(Y), features(X)
  6. The mean of activities and subject IDs is created in a separate tidy data set.
