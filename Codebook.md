@@ -26,9 +26,10 @@ For each record in the dataset it is provided:
 - Triaxial Angular velocity from the gyroscope.  
 - Its activity label. 
 
+## Variable descriptions
 |Variables                            | Descriptions
 |-------------------------------------|----------------------------------------------------------------------------------|
-|Subject                              |Subject ID
+|Subject                              |Subject ID (Range from 1 to 30)
 |Activity                             |Activity Name
 | tbodyacc-mean-x                     | Mean time for body acceleration in X direction
 | tbodyacc-mean-y                     | Mean time for body acceleration in Y direction
